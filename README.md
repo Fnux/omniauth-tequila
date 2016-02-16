@@ -36,6 +36,7 @@ end
 OmniAuth Tequila authenticates with the EPFL server over SSL by default. However, it supports the following configuration options:
 
   * `host` - Defines the host of your Tequila server
+  * `require_org` - Defines the organization that will have access to the service *(LdapDataConnector)*
   * `require_group` - Defines the group that will have access to the service
   * `service_name` - Define the name the service will authenticate with to tequila
   * `path` - Defines the URL relative to the host that the application sits behind
@@ -47,6 +48,8 @@ OmniAuth Tequila authenticates with the EPFL server over SSL by default. However
   * `request_info` - Hash that maps user attributes from Tequila to the [OmniAuth schema][omniauth_schema]. Defaults to `{ :name => 'displayname' }` (which is the user's full name when using EPFL's Tequila server)
 
 If you encounter problems wih SSL certificates you may want to set the `ca_path` parameter or activate `disable_ssl_verification` (not recommended).
+
+**Note about `require_org` and `require_group` :** See the EPFL's [Tequila configuration](http://tequila.epfl.ch/cgi-bin/tequila/serverinfo).
 
 ## Contributing
 
