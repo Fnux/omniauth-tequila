@@ -96,7 +96,7 @@ module OmniAuth
         # NB: You might want to set the service and required group yourself.
         request_fields = @options[:request_info].values << @options[:uid_field]
         body = 'urlaccess=' + callback_url + "\nservice=" + @options[:service_name] + "\n" +
-          'request=' + request_fields.join(',') + "\nrequire=org=" + @options[:require_org] + "\nrequire=group=" + @options[:require_group]
+          'request=' + request_fields.join(',') + "\nrequire=org=" + @options[:require_group]
         tequila_post '/createrequest', body
       end
 
